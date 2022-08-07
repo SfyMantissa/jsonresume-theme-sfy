@@ -3,14 +3,14 @@
     {{#if location}}
       {{> icon-tag icon="map-marker" text=(formatAddress location) title="Location" url=""}}
     {{/if}}
+    {{#if website}}
+      {{> icon-tag icon="desktop" text=(removeProtocol website) title="Website" url=website}}
+    {{/if}}
     {{#if email}}
-      {{> icon-tag icon="envelope" text=email title="E-mail" url=""}}
+      {{> icon-tag icon="envelope" text=(removeProtocol email) title="E-mail" url=email}}
     {{/if}}
     {{#if phone}}
       {{> icon-tag icon="phone" text=phone title="Phone" url=""}}
-    {{/if}}
-    {{#if website}}
-      {{> icon-tag icon="desktop" text=(removeProtocol website) url=website title="Website"}}
     {{/if}}
     {{#if profiles.length}}
 			{{#each profiles}}

@@ -28,23 +28,26 @@
 	<body class="bg-zinc-900 pt-8 px-4 print:px-8 text-white text-sm">
 	<div class="max-w-4xl mx-auto px-2">
   <div class="mb-2">
-      <div class="flex flex-col sm:flex-row print:flex-row sm:justify-between print:justify-between">
-        <div>
+      <div class="flex sm:flex-row print:flex-col sm:justify-between print:justify-between">
+        <div class="basis-3/5">
           <h1 class="text-5xl mb-4">{{resume.basics.name}}</h1>
-          <h2 class="text-xl mb-4">{{resume.basics.label}}</h2>
+          <h2 class="text-3xl mb-4">{{resume.basics.label}}</h2>
         </div>
-        <div class="text-white">
+        <div class="basis-1/5">
+          <img src={{resume.basics.image}} width="135" alt="Italian Trulli">
+         </div>
+        <div class="basis-1/5 text-white">
           {{> contact}}
         </div>
       </div>
     </div>
     {{#if resume.basics.summary}}
-      <div class="mb-4">
+      <div class="mb-2">
         <p>{{resume.basics.summary}}</p>
       </div>
     {{/if}}
     <div class="sm:grid print:grid grid-cols-4 gap-8">
-      <div class="sm:order-2 print:order-2 col-span-3 mb-4">
+      <div class="sm:order-2 print:order-2 col-span-3 mb-2">
         {{> work }}
         {{> volunteer }}
         {{> education }}
@@ -52,7 +55,7 @@
         {{> publications }}
         {{> references }}
       </div>
-      <div class="order-1 col-span-1 mb-4">
+      <div class="order-1 col-span-1 mb-2">
         {{> skills }}
         {{> languages }}
         {{> interests }}

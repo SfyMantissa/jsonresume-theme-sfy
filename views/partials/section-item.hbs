@@ -1,5 +1,5 @@
-<div class="mb-6 break-inside-avoid">
-  <div class="flex flex-row items-start justify-between mb-3">
+<div class="break-inside-avoid mb-2">
+  <div class="flex flex-row items-start justify-between">
     <div>
       <h3 class="text-base font-bold">
         {{#if website}}
@@ -34,12 +34,12 @@
     {{/if}}
   </div>
   {{#if text}}
-    <p class="mb-2">{{text}}</p>
+    <p class="mb-1">{{text}}</p>
   {{/if}}
   {{#if list.length}}
     <ul class="list-disc list-inside">
       {{#each list}}
-        <li class="mb-1">{{.}}</li>
+        <li>{{.}}</li>
       {{/each}}
     </ul>
   {{/if}}
